@@ -5,7 +5,10 @@ require('dotenv').config();
 const axios = require('axios');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://cognitovid.netlify.app'
+}));
+
 app.use(bodyParser.json());
 
 // 🔁 Prompt based on mode
